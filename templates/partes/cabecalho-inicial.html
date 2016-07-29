@@ -1,0 +1,72 @@
+ <div class="home banner" style="background-image: url('img/banner.jpg');">
+  
+  <div ng-include="'templates/partes/cabecalho/menu-acessibilidade.html'"></div><!-- Menu Acessibilidade -->
+  <div ng-include="'templates/partes/cabecalho/menu-principal.html'"></div><!-- Menu Principal -->
+  <div id="conteudo" class="cta container text-center">
+    <h2>Plataforma colaborativa com vídeos, jogos<br>e muitos outros Recursos Educacionais Digitais</h2>
+    <h3>Contribua com esse espaço: você pode publicar, favoritar e avaliar recursos</h3>
+    <div ng-include="'templates/partes/busca.html'"></div><!-- Busca -->
+
+  </div><!-- Banner Home -->
+
+</div>
+
+<!-- Busca Home -->
+<div class="busca text-center">
+  <!-- Nav tabs -->
+  <div class="wrap">
+    <ul class="nav nav-justified container" >
+      <li role="presentation" class="rea">
+        <a title="Buscar em Recursos Educacionais ABertos" href="#s-rea" aria-controls="s-rea" role="tab" data-toggle="tab">Recuros Educacionais Abertos</a>
+      </li>
+      <li role="presentation" class="cole">
+        <a title="Buscar em Coleções Estruturadas" href="#s-colecao" aria-controls="s-colecao" role="tab" data-toggle="tab">Coleções Estruturadas</a>
+      </li>
+      <li role="presentation" class="rev">
+        <a title="Buscar em Recursos Educacionais Validados" href="#s-rev" aria-controls="s-rev" role="tab" data-toggle="tab">Recursos Educacionais Validados</a>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane rea bg active" id="s-rea">
+      <div class="input-group wrap">
+        
+        <div class="icon col-md-5">
+          <img src="img/rea-icon.svg" alt="Recursos Educacionais Abertos">
+        </div>
+        <div class="conteudo col-md-7">
+          <p>Nessa área, você tem acesso aos <strong>Recursos Educacionais Abertos</strong> oriundos de Portais parceiros e enviados por outros usuários, além de poder publicar, favoritar, avaliar e compartilhar os recursos de sua preferência.</p>
+        
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane cole bg" id="s-colecao">
+        <div class="input-group container">
+          
+          <div class="icon col-md-5">
+            <img src="img/cole-icon.svg" alt="Coleções">
+          </div>          
+          <div class="conteudo col-md-7">
+            <h2 class="title">Coleções Estruturadas</h2>
+            <p>São mais de 100mil Recursos Educacionais disponíveis,<br>
+              que podem complementar sua aula!</p>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane rev bg" id="s-rev">
+          <div class="input-group container">
+            <div class="icon col-md-5">
+              <img src="img/rev-icon.svg" alt="Recursos Educacionais Validados">
+            </div>
+            <div class="conteudo col-md-7">
+              <h2 class="title">Recursos Educacionais<br>Qualificados pelo MEC</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis voluptas nihil voluptatibus in ipsam a delectus rem iusto inventore ut ipsum, mollitia sint provident hic iste possimus vero tenetur obcaecati?</p>
+              <a class="btn btn-default rev color" href="#" role="button">CONHECER CRITÉRIOS</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>

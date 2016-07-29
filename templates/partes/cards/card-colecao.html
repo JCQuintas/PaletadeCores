@@ -1,0 +1,21 @@
+<a id="btn-cole" href="" >
+  <div class="card colecao card">
+    <div class="figure" style="background-image: url(http://cdn.images.express.co.uk/img/dynamic/1/590x/Teacher-showing-kids-her-ipad-547955.jpg);"></div>
+    <div class="description">
+      <div class="title">Nome do recurso educacional</div>      
+      <div class="rating"><span ng-repeat="i in [1, 2, 3, 4, 5]" class="star"><i class="fa fa-star-o" aria-hidden="true"></i></span></div>
+      <div class="tipo"><i class="material-icons cole color">ondemand_video</i> Vídeo</div>
+      <div class="tags"><span>Biologia</span><span>Genética</span><span>Ensino médio</span><span>2º ano</span></div>  
+    </div>
+    <a href="#" class="fav-icon">
+      <i class="material-icons">favorite</i>
+    </a>
+  </div>
+  </a>  
+  <a class="cole bg text-center btn saiba-mais" href="">
+    <p>SAIBA MAIS <i class="material-icons">keyboard_arrow_down</i></p>
+    <p style="display: none">FECHAR <i class="material-icons">keyboard_arrow_up</i></p>
+  </a>
+
+
+<div class="wrap saiba-mais" ng-include="'templates/partes/cards/card-colecao-carousel.html'"></div>

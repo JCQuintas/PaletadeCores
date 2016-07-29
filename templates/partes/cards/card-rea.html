@@ -1,0 +1,74 @@
+<a href="#/recurso?id={{recurso.id}}">
+  <div class="wrap card">
+    <div class="card rea ">
+
+      <!-- Imagem, caso thumbnail seja true-->
+      <div ng-if="recurso.thumbnail" class="figure" style="background-image: url(http://portalmecapi.c3sl.ufpr.br{{ recurso.thumbnail }})"></div>
+      <!-- Imagem, caso thumbnail seja false - verifica o tipo -->
+      <div ng-show="recurso.thumbnail == undefined" >
+        <div ng-if="recurso.object_type == 'Áudio'"> <!-- Áudio -->
+          <div class="figure audio" style="background-image: url(img/tumblr_REAs/tumblr_REAs_AUDIO_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'Experimento prático'"> <!-- Experimento prático -->
+          <div class="figure experimento" style="background-image: url(img/tumblr_REAs/tumblr_REAs_OUTROS_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'Imagem'"> <!-- Imagem -->
+          <div class="figure imagem" style="background-image: url(img/tumblr_REAs/tumblr_REAs_IMAGEM_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'Mapa'"> <!-- Mapa -->
+          <div class="figure mapa" style="background-image: url(img/tumblr_REAs/tumblr_REAs_MAPA_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'Outros'"> <!-- Outros -->
+          <div class="figure outros" style="background-image: url(img/tumblr_REAs/tumblr_REAs_OUTROS_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'PDF'"> <!-- PDF -->
+          <div class="figure pdf" style="background-image: url(img/tumblr_REAs/tumblr_REAs_PDF_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'Animação/simulação'"> <!-- Animação/simulação -->
+          <div class="figure animacao" style="background-image: url(img/tumblr_REAs/tumblr_REAs_SIMULACAO_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'Software Educacional'"> <!-- Software Educacional -->
+          <div class="figure software" style="background-image: url(img/tumblr_REAs/tumblr_REAs_SOFTWARE_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'Texto'"> <!-- Texto -->
+          <div class="figure texto" style="background-image: url(img/tumblr_REAs/tumblr_REAs_TEXTO_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'Vídeo'"> <!-- Vídeo -->
+          <div class="figure video" style="background-image: url(img/tumblr_REAs/tumblr_REAs_VIDEO_home.svg)"></div>
+        </div>
+        <div ng-if="recurso.object_type == 'Website externo'"> <!--  Website externo -->
+          <div class="figure website" style="background-image: url(img/tumblr_REAs/tumblr_REAs_WEBSITE_home.svg)"></div>
+        </div>
+      </div>
+      <!-- // // // //-->
+
+      <div class="description">
+        <div class="title" >{{recurso.name | limitTo:50}}...</div>
+        <div class="rating"><span ng-repeat="i in [1, 2, 3, 4, 5]" class="star"><i class="fa fa-star-o" aria-hidden="true"></i></span></div>
+        <div class="tipo"><i class="material-icons rea color">ondemand_video</i> {{recurso.object_type}}</div>
+      </div>
+    </div>
+
+    <div class="card rea hover card">
+      <div class="description">
+        <div class="title">{{recurso.name | limitTo:75}}...</div>
+      </div>
+      <div class="resumo">
+        <div class="usuario"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/48.jpg" alt="Eva Faria"></div>
+        <div class="enviado-por">Enviado por:<br><span>{{recurso.publisher.name}}</span><p></div>
+        <!-- <div>{{recurso.description | limitTo:105}}...</p></div> -->
+        <div class="tags"><span ng-repeat="tags in recurso.tags">{{tags.name}}</span></div>
+      </div>
+      </a>
+      <div class="rodape">
+        <div class="links">
+          <a title="Compartilhar recurso" href="#"><i class="material-icons">share</i></a>
+          <a title="Baixar recurso" href="#"><i class="material-icons">file_download</i></a>
+        </div>
+        <div class="textlink">
+          <a title="Guardar recurso" href="#">GUARDAR</a>
+          <a title="Ver mais" href="#">VER MAIS</a>
+        </div>
+      </div>
+    </div>
+  </div>

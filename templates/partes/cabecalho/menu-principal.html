@@ -1,0 +1,71 @@
+    <div class="header">
+      <div class="main-menu container">
+        <div class="menu-left pull-left">
+          <div class="logo">
+            <a href="/#/home"><div ng-include="'templates/partes/logo.html'"></div></a>
+         </div>
+       </div>
+       <div class="menu-right pull-right">
+        <ul id="menu" class="list-inline">
+          <li><a title="Recursos" href="/#/recurso.html">Grandes Áreas</a></li>
+          <li><a title="Sobre" href="/#/sobre.html">Sobre</a></li>
+          <li><a title="Ajuda" href="/#/ajuda.html">Ajuda</a></li>
+          <li><a title="Enviar material" class="upload rea bg" href="/#/upload.html">Publicar recurso <i class="material-icons">&#xE2C6;</i></a></li>
+          <li><a title="Entrar" data-toggle="modal" data-target="#login" href="/#/login">Entrar</a></li>
+          <li><a title="Cadastrar-se" data-toggle="modal" data-target="#cadastrese" href="/#/cadastrar">Cadastrar-se</a></li>
+        </ul>
+
+        <!-- Modal Entrar -->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-login col-md-4" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <div class="login-social">
+                  <a href="https://facebook.com" class="btn btn-primary btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Entrar com o Facebook</a>
+                  <br>
+                  <a href="https://facebook.com" class="btn btn-danger btn-facebook"><i class="fa fa-google-plus" aria-hidden="true"></i> Conectar-se com o Google</a>
+                  <br>
+                </div>
+                ou
+                <br>
+                <h3>Entrar com o seu e-mail</h3>
+                <form ng-submit="doLogin()">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" ng-model="loginData.email">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" ng-model="loginData.password">
+                  </div>
+                  <button type="submit" class="btn btn-default">Conectar-se</button>
+                </form>
+                <div class="modal-footer">
+                  Ainda não tem cadastro? <a href="#">Cadastre-se</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Cadastrar-se -->
+        <div class="modal fade" id="cadastrese" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Cadastre-se</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

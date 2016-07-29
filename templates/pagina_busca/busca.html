@@ -1,0 +1,57 @@
+<!-- cabeçalho -->
+<div ng-include="'templates/partes/cabecalho-interno.html'"></div>
+<!-- // // //  -->
+
+<div class="main-content container busca-container">
+	<ol class="breadcrumb" style="margin-bottom: 5px;">
+		<li><a href="#">Página inicial</a></li>
+		<li class="active">Resultado da busca</li>
+	</ol>
+	<div class="resultados-label col-md-12">
+		<div class="pull-right">
+			Ordenar por:  
+
+			<div class="dropdown pull-right">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownComponente" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Mais vistos
+					<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownComponente">
+					<li><a href="#">Mais recentes</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- cabeçalho -->
+	<div ng-include="'templates/partes/filtro.html'"></div>
+	<!-- // // //  -->
+	<div class="container category category-1 col-md-9">  
+		<div class="row">
+			<h4>Foram encontrados <strong>X Resultados</strong> em <strong class="rea color">Recursos Abertos</strong>: "{{busca}}"</h4>			
+			<ul class=" category1 list-inline">
+				<li ng-repeat="recurso in recursos"  class="col-md-4" ng-include="'templates/partes/cards/card-rea.html'"></li> <!-- Card para recursos educacionais -->
+			</ul>
+		</div>
+
+		<a class="btn btn-default rea bg" href="">ver mais</a>
+		<div class="row">
+			<hr>
+			<h4>Foram encontrados <strong>0 Resultado</strong> em <strong class="cole color"> Coleções</strong>: ""</h4>			
+
+			<ul class=" category1 list-inline rea bg">
+				<!-- Card para coleções -->
+			</ul>
+
+			<a class="btn btn-default cole bg" href="">ver mais</a>
+		</div>
+		<div class="row">
+			<hr>
+			<h4>Foram encontrados <strong>0 Resultado</strong> em <strong class="rev color">Recursos Validados</strong>: ""</h4>			
+			<ul class=" category1 list-inline">
+				<!-- Card para recursos qualificados -->
+			</ul>
+			<a class="btn btn-default rev bg" href="">ver mais</a>
+			<hr>
+		</div>
+	</div>
+</div>
