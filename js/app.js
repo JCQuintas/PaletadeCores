@@ -1,8 +1,0 @@
-(function() {
-    'use strict';
-    angular.module('myApp', [
-      'ui.router',
-      'ng-token-auth'
-    ]);
-
-})();

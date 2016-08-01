@@ -1,4 +1,12 @@
 @charset "UTF-8";
+
+* {
+	font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 .flex-container {
     display: -webkit-flex;
     display: flex;
@@ -8,71 +16,68 @@
 }
 
 .flex-container > * {
-    padding: 10px;
     -webkit-flex: 1 100%;
     flex: 1 100%;
 }
 
 header {background: black;color:white;}
 
-/*  SECTIONS  */
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
+html, body {
+  height: 100%;
 }
 
-/*  COLUMN SETUP  */
-.col {
-	display: block;
-	float:left;
-	margin: 0 0 0 0.3%;
-}
-.col:first-child { margin-left: 0;}
-
-/*  GROUPING  */
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7 */ }
-
-/*  GRID OF EIGHT  */
-.span_8_of_8 {
-	width: 100%;
-}
-
-.span_7_of_8 {
-  	width: 87.46%;
-}
-
-.span_6_of_8 {
-  	width: 74.92%;
-}
-
-.span_5_of_8 {
-  	width: 62.38%;
-}
-
-.span_4_of_8 {
-  	width: 49.85%;
-}
-
-.span_3_of_8 {
-  	width: 37.31%;
-}
-
-.span_2_of_8 {
-  	width: 24.77%;
-}
-
-.span_1_of_8 {
-  height: 80px;
+.card {
+  width: 25%;
+  padding-bottom: 25%;
   background-color: blue;
-  width: 12.23%;
+  position: relative;
+  float: left;
+  margin: 5px;
 }
 
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 480px) {
-	.col {  margin: 1% 0 1% 0%; }
-	.span_1_of_8, .span_2_of_8, .span_3_of_8, .span_4_of_8, .span_5_of_8, .span_6_of_8, .span_7_of_8, .span_8_of_8 { width: 100%; }
+.text {
+  margin: 10px;
+  color: white;
+  position: absolute;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+/*Colorcards*/
+
+.colorcard {
+  color: rgba(255,255,255,0.5);
+  font-size: 11px;
+  padding: 10px;
+  vertical-align: bottom;
+  cursor: pointer;
+  position: relative;
+}
+
+.colorcard>span{
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.color_table {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  table-layout: fixed;
 }
