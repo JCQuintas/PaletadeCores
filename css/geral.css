@@ -24,6 +24,10 @@ header {background: black;color:white;}
 
 html, body {
   height: 100%;
+	width: 100%;
+	overflow: hidden;
+	margin-left: 0px;
+	margin-top: 0px;
 }
 
 .card {
@@ -49,11 +53,16 @@ html, body {
 
 .colorcard {
   color: rgba(255,255,255,0.5);
-  font-size: 11px;
+  font-size: 13px;
   padding: 10px;
-  vertical-align: bottom;
+  vertical-align: text-bottom;;
   cursor: pointer;
   position: relative;
+	padding-bottom: 2%;
+}
+
+.colorcard.light {
+  color: rgba(0,0,0,0.2);
 }
 
 .colorcard>span{
