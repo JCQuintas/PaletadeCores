@@ -23,7 +23,7 @@ html, body {
 /*Colorcards*/
 
 .colorcard {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.6);
   font-size: 13px;
   padding: 10px;
   vertical-align: text-bottom;;
@@ -32,7 +32,7 @@ html, body {
 }
 
 .colorcard.light {
-  color: rgba(0,0,0,0.2);
+  color: rgba(0,0,0,0.4);
 }
 
 .colorcard>span{
