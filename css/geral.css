@@ -7,20 +7,10 @@
   -moz-box-sizing: border-box;
 }
 
-.flex-container {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    text-align: center;
+#firstrow {
+	color: #fff;
+	background-color: #666;
 }
-
-.flex-container > * {
-    -webkit-flex: 1 100%;
-    flex: 1 100%;
-}
-
-header {background: black;color:white;}
 
 html, body {
   height: 100%;
@@ -28,25 +18,6 @@ html, body {
 	overflow: hidden;
 	margin-left: 0px;
 	margin-top: 0px;
-}
-
-.card {
-  width: 25%;
-  padding-bottom: 25%;
-  background-color: blue;
-  position: relative;
-  float: left;
-  margin: 5px;
-}
-
-.text {
-  margin: 10px;
-  color: white;
-  position: absolute;
-}
-
-#wrap {
-  overflow: hidden;
 }
 
 /*Colorcards*/
@@ -58,7 +29,6 @@ html, body {
   vertical-align: text-bottom;;
   cursor: pointer;
   position: relative;
-	padding-bottom: 2%;
 }
 
 .colorcard.light {
@@ -84,7 +54,7 @@ tbody {
   border-color: inherit;
 }
 
-.color_table {
+.color_table, .main-container {
   width: 100%;
   height: 100%;
   border: 0px;
