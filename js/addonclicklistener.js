@@ -1,6 +1,6 @@
-var datavariavel = document.getElementsByClassName("colorcard");
+var classname = document.getElementsByClassName("colorcard");
 
-alert(datavariavel);
+alert(classname);
 
 var myFunction = function() {
     var attribute = this.getAttribute("data-hex");
